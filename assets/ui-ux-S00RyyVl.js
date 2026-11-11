@@ -1,0 +1,1 @@
+import{s as e}from"./index-BY2UhJ1z.js";import{t}from"./ProjectGallery-BB31lF3D.js";var n=e(),r=()=>(0,n.jsx)(t,{category:`UI/UX`});export{r as component};
