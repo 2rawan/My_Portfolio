@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SIDR — Natural Skincare, Simplified</title>
+<link rel="icon" href="../../favicon.ico?v=2" type="image/x-icon">
+<meta name="description" content="SIDR is thoughtfully sourced, botanical skincare for a calmer, healthier complexion.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a href="#top" class="logo" aria-label="SIDR home">SIDR</a>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="#shop">Shop</a>
+      <a href="#rituals">Rituals</a>
+      <a href="#ingredients">Ingredients</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" type="button" aria-label="Search products" id="searchBtn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></svg>
+      </button>
+      <button class="icon-btn bag-btn" type="button" aria-label="Open cart, 0 items" id="cartBtn" aria-controls="cartDrawer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+        <span class="badge" id="cartCount" hidden>0</span>
+      </button>
+      <button class="icon-btn menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav" id="menuBtn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="hero-media"><img src="images/hero.jpg" alt="SIDR Radiant Face Serum dropper bottle on a stone pedestal among olive leaves"></div>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1>Skin, simplified.</h1>
+        <p class="lead">Thoughtfully sourced botanicals. Powerful results. A calmer, healthier you — naturally.</p>
+        <a href="#shop" class="btn btn-solid">Shop the Ritual</a>
+        <p class="eyebrow hero-foot">Pure ingredients. Real change.</p>
+      </div>
+      <p class="hero-side eyebrow">Natural skincare<br>for a brighter<br>tomorrow<span class="dash"></span></p>
+    </div>
+  </section>
+
+  <section class="essentials" id="shop">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Our Essentials</h2>
+        <p class="eyebrow">Three steps. Healthy, radiant skin.</p>
+      </div>
+      <div class="products">
+        <article class="product reveal">
+          <img src="images/cleanser.jpg" alt="SIDR Gentle Cleanser pump bottle with olive leaves" loading="lazy">
+          <h3>Gentle Cleanser</h3>
+          <p class="eyebrow">Purifies · Balances · Refreshes</p>
+          <p class="price">$32</p>
+          <button class="btn btn-outline add-btn" type="button" data-id="cleanser" data-name="Gentle Cleanser" data-price="32" data-img="images/cleanser.jpg">Add to cart</button>
+        </article>
+        <article class="product reveal">
+          <img src="images/serum.jpg" alt="SIDR Radiant Serum dropper bottle beside a stone" loading="lazy">
+          <h3>Radiant Serum</h3>
+          <p class="eyebrow">Brightens · Smooths · Restores</p>
+          <p class="price">$58</p>
+          <button class="btn btn-outline add-btn" type="button" data-id="serum" data-name="Radiant Serum" data-price="58" data-img="images/serum.jpg">Add to cart</button>
+        </article>
+        <article class="product reveal">
+          <img src="images/moisturizer.jpg" alt="SIDR Nourishing Moisturizer jar" loading="lazy">
+          <h3>Nourishing Moisturizer</h3>
+          <p class="eyebrow">Hydrates · Protects · Replenishes</p>
+          <p class="price">$46</p>
+          <button class="btn btn-outline add-btn" type="button" data-id="moisturizer" data-name="Nourishing Moisturizer" data-price="46" data-img="images/moisturizer.jpg">Add to cart</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="ingredients" id="ingredients">
+    <div class="container split">
+      <div class="split-copy reveal">
+        <p class="eyebrow">Ingredients with intention</p>
+        <h2>Nature does<br>the hard work.</h2>
+        <p>We source potent, time-honored botanicals to create high-performance skincare that respects your skin and the planet.</p>
+        <a href="#ingredients" class="btn btn-solid">Our Ingredients</a>
+      </div>
+      <ul class="tiles">
+        <li class="reveal"><img src="images/olive.jpg" alt="Green olives on a branch" loading="lazy"><h3 class="eyebrow-h">Olive Leaf</h3><p>Soothes &amp; protects</p></li>
+        <li class="reveal"><img src="images/neroli.jpg" alt="White neroli blossom" loading="lazy"><h3 class="eyebrow-h">Neroli</h3><p>Calms &amp; renews</p></li>
+        <li class="reveal"><img src="images/jojoba.jpg" alt="Brown jojoba seeds" loading="lazy"><h3 class="eyebrow-h">Jojoba</h3><p>Balances &amp; strengthens</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="rituals" id="rituals">
+    <div class="container split">
+      <div class="split-copy reveal">
+        <p class="eyebrow">A simple ritual</p>
+        <h2>Rituals for<br>real results.</h2>
+        <p>Three mindful steps. A healthier, happier complexion — every day.</p>
+        <a href="#rituals" class="btn btn-solid">Explore the Ritual</a>
+      </div>
+      <ol class="steps">
+        <li class="reveal"><img src="images/cleanse.jpg" alt="Hands holding cleansing foam" loading="lazy"><div class="step-label"><span class="num">1</span><div><h3 class="eyebrow-h">Cleanse</h3><p>Purify and prep.</p></div></div></li>
+        <li class="arrow" aria-hidden="true">→</li>
+        <li class="reveal"><img src="images/treat.jpg" alt="Serum dropping from a glass pipette" loading="lazy"><div class="step-label"><span class="num">2</span><div><h3 class="eyebrow-h">Treat</h3><p>Target and restore.</p></div></div></li>
+        <li class="arrow" aria-hidden="true">→</li>
+        <li class="reveal"><img src="images/moisturize.jpg" alt="Fingertip with moisturizer cream" loading="lazy"><div class="step-label"><span class="num">3</span><div><h3 class="eyebrow-h">Moisturize</h3><p>Seal in the glow.</p></div></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="testimonial">
+    <div class="container testi reveal">
+      <img class="avatar" src="images/emma.jpg" alt="Portrait of a smiling SIDR customer" loading="lazy">
+      <figure>
+        <blockquote>“My skin has never felt calmer, clearer or more alive. SIDR is a ritual I genuinely look forward to.”</blockquote>
+        <figcaption><span class="line"></span><strong class="eyebrow-h">Emma L.</strong><small>Verified Customer</small></figcaption>
+      </figure>
+      <div class="rating">
+        <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="eyebrow">Real people<br>Real results<br>A brighter you</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container foot">
+    <div>
+      <a href="#top" class="logo" aria-label="SIDR back to top">SIDR</a>
+      <p class="eyebrow">Skincare for a brighter tomorrow</p>
+    </div>
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="#shop">Shop</a><a href="#rituals">Rituals</a><a href="#ingredients">Ingredients</a>
+      <a href="#top">Our Story</a><a href="#top">Journal</a><a href="#top">FAQ</a>
+    </nav>
+    <div class="foot-right">
+      <div class="social">
+        <a href="#top" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.8" cy="7.2" r=".6"/></svg></a>
+        <a href="#top" aria-label="Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M11 9.5c2-.8 4 .2 3.4 2.3-.5 1.8-2.2 2.6-3.2 1.7M11.3 11l-1.8 7"/></svg></a>
+        <a href="#top" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 20v-7h2.5l.5-3h-3V8.3c0-.9.4-1.3 1.4-1.3H17V4.3C16.5 4.2 15.7 4 14.8 4 12.7 4 11 5.2 11 7.6V10H8.5v3H11v7z"/></svg></a>
+        <a href="#top" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="4"/><path d="M10 9.5v5l4.5-2.5z"/></svg></a>
+      </div>
+      <p class="eyebrow">Kind to skin. Kinder to the planet.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay" hidden></div>
+<aside class="drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" aria-hidden="true">
+  <div class="drawer-head">
+    <h2 id="cartTitle">Your Bag</h2>
+    <button class="icon-btn" type="button" id="closeCart" aria-label="Close cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <ul class="cart-list" id="cartList"></ul>
+  <p class="cart-empty" id="cartEmpty">Your bag is empty.</p>
+  <div class="drawer-foot">
+    <div class="subtotal"><span>Subtotal</span><strong id="cartSubtotal">$0</strong></div>
+    <button class="btn btn-solid" type="button" id="checkoutBtn">Checkout</button>
+    <p class="note" id="cartNote" role="status"></p>
+  </div>
+</aside>
+
+<script src="script.js"></script>
+</body>
+</html>

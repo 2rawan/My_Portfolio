@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NABD — Move better, live brighter</title>
+<link rel="icon" href="../../favicon.ico?v=2" type="image/x-icon">
+<meta name="description" content="NABD is a fitness dashboard concept: activity ring, weekly movement chart, training plans and health metrics.">
+<meta name="theme-color" content="#0b0d0e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" fill="currentColor"/></symbol>
+<symbol id="i-dumbbell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 9v6M6 7v10M18 7v10M21 9v6M6 12h12"/></symbol>
+<symbol id="i-fork" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v7a2 2 0 0 0 2 2v9M10 3v7a2 2 0 0 1-2 2M6 3v7M18 21V3c-2 1-3 4-3 8h3"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.7A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></symbol>
+<symbol id="i-heart-f" viewBox="0 0 24 24"><path d="M12 21s-8.5-5.3-8.5-11.5A5 5 0 0 1 12 6.8a5 5 0 0 1 8.5 2.7C20.5 15.7 12 21 12 21z" fill="currentColor"/></symbol>
+<symbol id="i-bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="14" width="4" height="7" rx="1"/><rect x="10" y="9" width="4" height="12" rx="1"/><rect x="17" y="3" width="4" height="18" rx="1"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.3c2 .7 3.5 2.5 3.5 5.7"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 17V11a6 6 0 0 1 12 0v6l2 2H4zM10 21h4"/></symbol>
+<symbol id="i-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-shoe" viewBox="0 0 24 24"><path d="M2 15c0-1 .5-1.5 1.5-1.8l4-1.2 2 1.5 3-.8c2 .5 5 1.5 7 2.8 1.5 1 2 2 2 3H3c-1 0-1-1-1-2z" fill="currentColor"/></symbol>
+<symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 2c.5 4 5 6 5 11a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5 0 2 1 2.5 1.5 2.5C11 8 10.5 5 12 2z" fill="currentColor"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+<symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z" fill="currentColor"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></symbol>
+<symbol id="i-run" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="4.5" r="2"/><path d="m8 21 3-6 3 2v4M10 9l4-1.5 2 3.5 3 1M11 15l-1-5-3 2"/></symbol>
+<symbol id="i-lotus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 5c2 2 3 4 3 6.5S14 16 12 18c-2-2-3-4-3-6.5S10 7 12 5zM3 10c3 0 6 2 7.5 6.5C7 17 4 15 3 10zM21 10c-3 0-6 2-7.5 6.5 3.5.5 6.5-1.5 7.5-6.5zM6 20h12"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z" fill="currentColor"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+<symbol id="i-level" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="13" width="4" height="8" rx="1"/><rect x="10" y="8" width="4" height="13" rx="1"/><rect x="17" y="3" width="4" height="18" rx="1"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
+<symbol id="i-yt" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor"/><path d="m10 9 5 3-5 3z" fill="#0b0d0e"/></symbol>
+<symbol id="i-sp" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M7 9.5c3.5-1 7-.5 10 1.2M7.5 12.5c3-.8 6-.4 8.5 1M8 15.5c2.5-.6 5-.3 7 .8" stroke="#0b0d0e" stroke-width="1.6" stroke-linecap="round" fill="none"/></symbol>
+<symbol id="i-logo" viewBox="0 0 32 28"><path d="M0 0h13l10 14L13 28H0z" fill="currentColor"/><path d="M15 0h17v6L22 0zM32 28H19l9-12.5z" fill="currentColor" opacity=".85"/><path d="M5 22V9l9 13V9" stroke="#0b0d0e" stroke-width="3" fill="none"/></symbol>
+</defs>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="app" id="app">
+  <aside class="sidebar" id="sidebar" aria-label="Primary">
+    <a class="brand" href="#/dashboard" aria-label="NABD home">
+      <span class="brand-row"><svg class="logo" aria-hidden="true"><use href="#i-logo"/></svg><span class="brand-name">NABD</span></span>
+      <span class="tagline">Move better<br>Live brighter</span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#/dashboard" data-nav="dashboard"><svg aria-hidden="true"><use href="#i-home"/></svg><span>Dashboard</span></a>
+      <a href="#/training" data-nav="training"><svg aria-hidden="true"><use href="#i-dumbbell"/></svg><span>Training</span></a>
+      <a href="#/nutrition" data-nav="nutrition"><svg aria-hidden="true"><use href="#i-fork"/></svg><span>Nutrition</span></a>
+      <a href="#/wellbeing" data-nav="wellbeing"><svg aria-hidden="true"><use href="#i-heart"/></svg><span>Wellbeing</span></a>
+      <a href="#/progress" data-nav="progress"><svg aria-hidden="true"><use href="#i-bars"/></svg><span>Progress</span></a>
+      <a href="#/community" data-nav="community"><svg aria-hidden="true"><use href="#i-users"/></svg><span>Community</span></a>
+    </nav>
+  </aside>
+
+  <div class="content">
+    <header class="topbar">
+      <button class="icon-btn collapse" id="collapseBtn" aria-label="Toggle sidebar" aria-expanded="true" aria-controls="sidebar"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
+      <form class="search" role="search" id="searchForm" onsubmit="return false">
+        <svg aria-hidden="true"><use href="#i-search"/></svg>
+        <label class="sr" for="search">Search</label>
+        <input id="search" type="search" placeholder="Search workouts, meals, insights…" autocomplete="off">
+      </form>
+      <div class="top-right">
+        <div class="bell-wrap">
+          <button class="icon-btn" id="bellBtn" aria-label="Notifications" aria-expanded="false" aria-controls="notifs"><svg aria-hidden="true"><use href="#i-bell"/></svg><i class="dot" id="bellDot"></i></button>
+          <div class="popover" id="notifs" hidden>
+            <strong>Notifications</strong>
+            <ul>
+              <li>Upper Body Power completed. Great work!</li>
+              <li>Your next session is Wed at 7:00 AM.</li>
+              <li>You hit 78% of your daily goal.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="user"><img src="images/avatar.jpg" alt="" width="40" height="40"><span><b>Rawan</b><small>Member</small></span><svg aria-hidden="true"><use href="#i-chev"/></svg></div>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <p class="empty" id="noResults" hidden>No results match your search.</p>
+
+      <!-- DASHBOARD -->
+      <section class="view" data-view="dashboard" aria-labelledby="hello">
+        <div class="hero">
+          <div>
+            <h1 id="hello"><span class="greet">Good morning,</span><span class="big">Rawan</span></h1>
+            <p class="sub">A healthier, stronger you is a kinder you. Let's make it happen today.</p>
+          </div>
+          <p class="motto">Discipline<br>builds a brighter<br>tomorrow.<i></i></p>
+        </div>
+
+        <div class="row r-top">
+          <article class="card activity" data-search="activity steps calories km active minutes ring goal">
+            <div class="card-head"><div><h2>Today's Activity</h2><p class="muted" id="today"></p></div></div>
+            <div class="act-body">
+              <div class="ring" role="img" id="ringWrap" aria-label="Daily goal progress">
+                <svg viewBox="0 0 200 200" aria-hidden="true">
+                  <circle class="track" cx="100" cy="100" r="86"/>
+                  <circle class="prog" id="ringProg" cx="100" cy="100" r="86" transform="rotate(-90 100 100)"/>
+                </svg>
+                <div class="ring-txt"><b><span id="pct">0</span><small>%</small></b><span>Daily goal</span></div>
+              </div>
+              <ul class="stats">
+                <li><span class="si"><svg aria-hidden="true"><use href="#i-shoe"/></svg></span><div><b id="stSteps">0</b><small>steps</small></div></li>
+                <li><span class="si"><svg aria-hidden="true"><use href="#i-flame"/></svg></span><div><b id="stCal">0</b><small>calories</small></div></li>
+                <li><span class="si"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><div><b id="stKm">0</b><small>km</small></div></li>
+                <li><span class="si"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span><div><b id="stMin">0</b><small>active minutes</small></div></li>
+              </ul>
+            </div>
+            <div class="act-actions">
+              <button class="btn" id="logBtn"><svg aria-hidden="true"><use href="#i-plus"/></svg>Log activity</button>
+              <button class="btn ghost" id="resetBtn">Reset day</button>
+            </div>
+          </article>
+
+          <article class="card workout" data-search="workout upper body power strength">
+            <div class="card-head"><h2>Today's Workout</h2><span class="done" id="doneBadge"><svg aria-hidden="true"><use href="#i-check"/></svg>Completed</span></div>
+            <div class="wk-photo">
+              <div class="wk-txt">
+                <small>Strength</small>
+                <h3>Upper Body<br>Power</h3>
+                <p><span><svg aria-hidden="true"><use href="#i-clock"/></svg>45 min</span><span><svg class="fl" aria-hidden="true"><use href="#i-flame"/></svg>320 cal</span></p>
+                <button class="btn" id="viewWorkout">View Workout</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="row r-mid">
+          <article class="card chart-card" data-search="weekly movement chart steps calories active minutes">
+            <div class="card-head">
+              <h2 id="chartTitle">Weekly Movement</h2>
+              <div class="select"><label class="sr" for="metric">Metric</label>
+                <select id="metric"><option value="steps">Steps</option><option value="calories">Calories</option><option value="minutes">Active minutes</option></select>
+                <svg aria-hidden="true"><use href="#i-chev"/></svg></div>
+            </div>
+            <div class="chart" id="chart"><div class="tip" id="tip" role="status" hidden></div></div>
+          </article>
+          <article class="card trend" data-search="trend week improvement">
+            <p class="trend-big"><svg aria-hidden="true"><use href="#i-bars"/></svg><b id="trendPct">+12%</b></p>
+            <p class="muted lg">from last week</p>
+            <hr>
+            <p class="msg">You're moving more consistently. Keep it up!</p>
+          </article>
+        </div>
+
+        <div class="sec-head"><h2>Your Training Plan</h2><a class="more" href="#/training">View Full Plan<svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        <div class="row r-plan">
+          <a class="card plan" href="#/training" data-search="strength training plan build stronger" style="--img:url(images/strength.jpg)">
+            <span class="pi"><svg aria-hidden="true"><use href="#i-dumbbell"/></svg></span><h3>Strength</h3><p>Build a stronger you</p>
+            <div class="pf"><span>3 sessions this week</span><i class="go"><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></div>
+          </a>
+          <a class="card plan" href="#/training" data-search="mobility training plan move freely" style="--img:url(images/mobility.jpg)">
+            <span class="pi"><svg aria-hidden="true"><use href="#i-run"/></svg></span><h3>Mobility</h3><p>Move freely, feel better</p>
+            <div class="pf"><span>2 sessions this week</span><i class="go"><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></div>
+          </a>
+          <a class="card plan" href="#/training" data-search="recovery training plan recharge" style="--img:url(images/recovery.jpg)">
+            <span class="pi"><svg aria-hidden="true"><use href="#i-lotus"/></svg></span><h3>Recovery</h3><p>Recharge for what's next</p>
+            <div class="pf"><span>2 sessions this week</span><i class="go"><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></div>
+          </a>
+        </div>
+
+        <div class="sec-head"><h2>Your Health Metrics</h2><a class="more" href="#/progress">View All Metrics<svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        <div class="row r-health">
+          <article class="card hm" data-search="heart rate bpm resting health">
+            <p class="hm-t"><svg class="red" aria-hidden="true"><use href="#i-heart-f"/></svg>Heart Rate</p>
+            <div class="hm-main"><div><b>64<small> bpm</small></b><span class="muted">Resting heart rate</span></div><div class="delta"><b class="down">↓ -6%</b><span class="muted">vs. last week</span></div></div>
+            <div class="spark" id="hrSpark"></div>
+          </article>
+          <article class="card hm" data-search="sleep hours rest health">
+            <p class="hm-t"><svg class="vio" aria-hidden="true"><use href="#i-moon"/></svg>Sleep</p>
+            <div class="hm-main"><div><b>7<small>h </small>48<small>m</small></b><span class="muted">Total sleep time</span></div><div class="delta"><b class="up">↑ +12%</b><span class="muted">vs. last week</span></div></div>
+            <div class="spark" id="sleepBars"></div>
+          </article>
+          <article class="card quote" data-search="quote calmer mind stronger you motivation" style="--img:url(images/quote.jpg)"><p>A calmer mind<br>a stronger you.<i></i></p></article>
+        </div>
+
+        <article class="card session" data-search="next session full body strength calendar" style="--img:url(images/session.jpg)">
+          <div class="ses-main">
+            <div class="ses-head"><span class="si sq"><svg aria-hidden="true"><use href="#i-cal"/></svg></span><div><b>Your Next Session</b><span class="muted">Wed, Apr 30 • 7:00 AM</span></div></div>
+            <h3>Full Body Strength</h3>
+            <p class="muted">Build power, improve endurance, and keep your momentum going.</p>
+            <div class="meta"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>45 min</span><span><svg aria-hidden="true"><use href="#i-level"/></svg>All levels</span><span><svg aria-hidden="true"><use href="#i-pin"/></svg>NABD Gym</span></div>
+          </div>
+          <div class="ses-side"><button class="btn" id="icsBtn">Add to Calendar</button><p class="motto sm">Consistent<br>effort creates<br>real change.<i></i></p></div>
+        </article>
+      </section>
+
+      <!-- TRAINING -->
+      <section class="view" data-view="training" aria-labelledby="t-h" hidden>
+        <div class="page-head"><h1 id="t-h">Training</h1><p class="sub">Your week at a glance. Tick sessions off as you complete them.</p></div>
+        <div class="card" data-search="training progress week">
+          <div class="card-head"><h2>Weekly progress</h2><b class="lime" id="tCount"></b></div>
+          <div class="bar"><i id="tBar"></i></div>
+        </div>
+        <ul class="list" id="workoutList"></ul>
+      </section>
+
+      <!-- NUTRITION -->
+      <section class="view" data-view="nutrition" aria-labelledby="n-h" hidden>
+        <div class="page-head"><h1 id="n-h">Nutrition</h1><p class="sub">Fuel your body — track water and meals.</p></div>
+        <div class="grid2">
+          <article class="card" data-search="water hydration glasses">
+            <div class="card-head"><h2>Hydration</h2><b class="lime" id="wCount"></b></div>
+            <div class="glasses" id="glasses" role="group" aria-label="Water glasses"></div>
+            <p class="muted">Tap a glass to log it. Goal: 8 glasses.</p>
+          </article>
+          <article class="card" data-search="calories macros protein carbs fat">
+            <div class="card-head"><h2>Calories</h2><b class="lime" id="kcalTotal"></b></div>
+            <div class="bar"><i id="kcalBar"></i></div>
+            <ul class="macros" id="macros"></ul>
+          </article>
+        </div>
+        <article class="card" data-search="meals breakfast lunch dinner snack">
+          <div class="card-head"><h2>Meals</h2></div>
+          <ul class="list flat" id="mealList"></ul>
+          <form class="inline-form" id="mealForm">
+            <label class="sr" for="mealName">Meal name</label><input id="mealName" placeholder="Meal name" required maxlength="40">
+            <label class="sr" for="mealKcal">Calories</label><input id="mealKcal" type="number" min="1" max="3000" placeholder="kcal" required>
+            <button class="btn" type="submit">Add meal</button>
+          </form>
+        </article>
+      </section>
+
+      <!-- WELLBEING -->
+      <section class="view" data-view="wellbeing" aria-labelledby="w-h" hidden>
+        <div class="page-head"><h1 id="w-h">Wellbeing</h1><p class="sub">A calmer mind, a stronger you.</p></div>
+        <div class="grid2">
+          <article class="card" data-search="mood check in feeling">
+            <div class="card-head"><h2>How are you feeling?</h2></div>
+            <div class="moods" id="moods" role="radiogroup" aria-label="Mood"></div>
+            <p class="muted" id="moodMsg"></p>
+          </article>
+          <article class="card" data-search="breathing breathe calm meditation">
+            <div class="card-head"><h2>Box breathing</h2></div>
+            <div class="breath"><div class="orb" id="orb"><span id="orbTxt">Ready</span></div></div>
+            <div class="act-actions"><button class="btn" id="breathBtn">Start</button></div>
+          </article>
+        </div>
+        <article class="card" data-search="sleep goal bedtime">
+          <div class="card-head"><h2>Sleep goal</h2><b class="lime" id="sleepOut"></b></div>
+          <label class="sr" for="sleepRange">Sleep goal hours</label>
+          <input type="range" id="sleepRange" min="5" max="10" step="0.5">
+          <p class="muted">Last night: 7h 48m. Adjust your nightly target.</p>
+        </article>
+      </section>
+
+      <!-- PROGRESS -->
+      <section class="view" data-view="progress" aria-labelledby="p-h" hidden>
+        <div class="page-head"><h1 id="p-h">Progress</h1><p class="sub">Track how far you've come.</p></div>
+        <div class="grid3" id="kpis"></div>
+        <article class="card" data-search="progress bars month weekly">
+          <div class="card-head"><h2>Last 8 weeks</h2></div>
+          <div class="chart" id="barChart"></div>
+        </article>
+        <article class="card" data-search="personal records best">
+          <div class="card-head"><h2>Personal records</h2></div>
+          <ul class="list flat" id="prList"></ul>
+        </article>
+      </section>
+
+      <!-- COMMUNITY -->
+      <section class="view" data-view="community" aria-labelledby="c-h" hidden>
+        <div class="page-head"><h1 id="c-h">Community</h1><p class="sub">Move together. Join a challenge.</p></div>
+        <ul class="list" id="challengeList"></ul>
+        <article class="card" data-search="leaderboard ranking members">
+          <div class="card-head"><h2>Weekly leaderboard</h2></div>
+          <ol class="board" id="board"></ol>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <b class="f-brand">NABD</b>
+      <nav aria-label="Footer"><a href="#/dashboard">About</a><a href="#/dashboard">Privacy</a><a href="#/dashboard">Terms</a><a href="#/community">Contact</a></nav>
+      <div class="social"><a href="#/community" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a><a href="#/community" aria-label="YouTube"><svg><use href="#i-yt"/></svg></a><a href="#/community" aria-label="Spotify"><svg><use href="#i-sp"/></svg></a></div>
+      <small>A healthier, happier you</small>
+    </footer>
+  </div>
+</div>
+
+<nav class="bottom-nav" aria-label="Mobile navigation" id="bottomNav">
+  <a href="#/dashboard" data-nav="dashboard"><svg aria-hidden="true"><use href="#i-home"/></svg><span>Home</span></a>
+  <a href="#/training" data-nav="training"><svg aria-hidden="true"><use href="#i-dumbbell"/></svg><span>Train</span></a>
+  <a href="#/nutrition" data-nav="nutrition"><svg aria-hidden="true"><use href="#i-fork"/></svg><span>Eat</span></a>
+  <a href="#/wellbeing" data-nav="wellbeing"><svg aria-hidden="true"><use href="#i-heart"/></svg><span>Well</span></a>
+  <a href="#/progress" data-nav="progress"><svg aria-hidden="true"><use href="#i-bars"/></svg><span>Stats</span></a>
+  <a href="#/community" data-nav="community"><svg aria-hidden="true"><use href="#i-users"/></svg><span>Social</span></a>
+</nav>
+
+<dialog id="workoutDlg" aria-labelledby="wd-t">
+  <form method="dialog" class="dlg-x"><button class="icon-btn" aria-label="Close">✕</button></form>
+  <small class="lime">Strength</small>
+  <h2 id="wd-t">Upper Body Power</h2>
+  <div class="timer" role="timer" aria-live="off"><b id="timerOut">45:00</b></div>
+  <div class="act-actions">
+    <button class="btn" id="tStart">Start</button><button class="btn ghost" id="tReset">Reset</button>
+  </div>
+  <ul class="ex" id="exList"></ul>
+</dialog>
+
+<dialog id="logDlg" aria-labelledby="ld-t">
+  <form method="dialog" class="dlg-x"><button class="icon-btn" aria-label="Close">✕</button></form>
+  <h2 id="ld-t">Log activity</h2>
+  <form id="logForm" class="stack">
+    <label for="logSteps">Steps to add</label>
+    <input id="logSteps" type="number" min="1" max="50000" value="500" required>
+    <div class="chips" id="logChips"><button type="button" class="chip" data-v="500">+500</button><button type="button" class="chip" data-v="1000">+1,000</button><button type="button" class="chip" data-v="2500">+2,500</button></div>
+    <button class="btn" type="submit">Add</button>
+  </form>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
