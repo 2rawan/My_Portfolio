@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844" fill="none">
+  <rect id="Background" x="0" y="0" width="390" height="844" rx="0" fill="#F7F4EE"/>
+  <g id="Status bar">
+    <text x="32" y="34" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#2B2119" text-anchor="start">9:41</text>
+    
+    <g id="Signal"><rect x="296" y="27" width="3" height="5" rx="1" fill="#2B2119"/><rect x="301" y="25" width="3" height="7" rx="1" fill="#2B2119"/><rect x="306" y="22" width="3" height="10" rx="1" fill="#2B2119"/><rect x="311" y="19" width="3" height="13" rx="1" fill="#2B2119"/></g>
+    <path id="Wifi" d="M319 24.5a8 8 0 0 1 11 0M321.2 27.2a5 5 0 0 1 6.6 0M323.3 29.8a2 2 0 0 1 2.4 0" fill="none" stroke="#2B2119" stroke-width="1.7" stroke-linecap="round"/>
+    <g id="Battery"><rect x="337" y="19" width="22" height="12" rx="3.5" fill="none" stroke="#2B2119" stroke-opacity="0.4"/><rect x="339" y="21" width="16" height="8" rx="2" fill="#2B2119"/><rect x="360.5" y="23" width="1.5" height="4" rx="0.7" fill="#2B2119" opacity="0.4"/></g>
+  </g>
+  <g id="Header">
+    <g id="Icon / x" transform="translate(24 60) scale(1)" fill="none" stroke="#2B2119" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></g>
+    <text x="195" y="82" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#8A7F74" text-anchor="middle">Order confirmed</text>
+  </g>
+  <g id="Illustration / Success">
+    <circle cx="195" cy="190" r="84" fill="#D9CBB8" opacity="0.35"/>
+    <circle cx="195" cy="190" r="64" fill="#D9CBB8" opacity="0.6"/>
+    <circle cx="195" cy="190" r="44" fill="#6E7055"/>
+    <g id="Icon / check" transform="translate(171 166) scale(2)" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></g>
+    <g id="Icon / leaf" transform="translate(96 120) scale(1.08333)" fill="none" stroke="#6E7055" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-9 5-14 14-14 0 9-5 14-14 14z"/><path d="M5 19l8-8"/></g>
+    <g id="Icon / leaf" transform="translate(268 240) scale(1.08333)" fill="none" stroke="#4E3B2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-9 5-14 14-14 0 9-5 14-14 14z"/><path d="M5 19l8-8"/></g>
+    <circle cx="110" cy="232" r="5" fill="#C9A24A"/>
+    <circle cx="286" cy="130" r="6" fill="#D9CBB8"/>
+    <circle cx="300" cy="178" r="3.5" fill="#6E7055"/>
+    <circle cx="86" cy="178" r="3.5" fill="#C9A24A"/>
+  </g>
+  <g id="Title">
+    <text x="195" y="312" font-family="Playfair Display, serif" font-size="32" font-weight="600" fill="#2B2119" text-anchor="middle">Your order is</text>
+    <text x="195" y="352" font-family="Playfair Display, serif" font-size="32" font-weight="600" fill="#2B2119" text-anchor="middle">on its way</text>
+    <rect x="110" y="372" width="170" height="32" rx="16" fill="#FFFFFF" stroke="#E6DED3" stroke-width="1"/>
+    <text x="195" y="393" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#4E3B2A" text-anchor="middle">Order #DAR-20418</text>
+  </g>
+  <g id="Delivery card">
+    <rect x="24" y="436" width="342" height="80" rx="20" fill="#FFFFFF"/>
+    <circle cx="64" cy="476" r="22" fill="#F7F4EE"/>
+    <g id="Icon / truck" transform="translate(52 464) scale(1)" fill="none" stroke="#4E3B2A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></g>
+    <text x="98" y="470" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#8A7F74" text-anchor="start">Estimated delivery</text>
+    <text x="98" y="494" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#2B2119" text-anchor="start">Tue 18 – Thu 20 Nov</text>
+  </g>
+  <g id="Eco impact card">
+    <rect x="24" y="532" width="342" height="92" rx="20" fill="#EEF0E4"/>
+    <circle cx="64" cy="578" r="22" fill="#FFFFFF"/>
+    <g id="Icon / leaf" transform="translate(52 566) scale(1)" fill="none" stroke="#6E7055" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-9 5-14 14-14 0 9-5 14-14 14z"/><path d="M5 19l8-8"/></g>
+    <text x="98" y="568" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#6E7055" text-anchor="start">Eco impact</text>
+    <text x="98" y="592" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#2B2119" text-anchor="start">This order planted 2 trees</text>
+    <text x="98" y="610" font-family="Inter, sans-serif" font-size="12" font-weight="400" fill="#5C5148" text-anchor="start">Carbon-neutral delivery included</text>
+  </g>
+  <g id="Button / Track order">
+    <rect x="24" y="690" width="342" height="54" rx="27.0" fill="#4E3B2A"/>
+    <text x="195.0" y="722.5" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF" text-anchor="middle">Track order</text>
+  </g>
+  <g id="Button / Continue shopping">
+    <rect x="24" y="756" width="342" height="54" rx="27.0" fill="#FFFFFF" stroke="#4E3B2A" stroke-width="1.5"/>
+    <text x="195.0" y="788.5" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#4E3B2A" text-anchor="middle">Continue shopping</text>
+  </g>
+  <rect id="Home indicator" x="127" y="826" width="136" height="5" rx="2.5" fill="#2B2119"/>
+</svg>
