@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MASAR — Slower travel, richer stories</title>
+<link rel="icon" href="../../favicon.ico?v=2" type="image/x-icon">
+<meta name="description" content="MASAR is an editorial slow-travel concept: curated journeys through Petra, AlUla and Wadi Rum, with a simple itinerary planner.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header" id="header">
+  <div class="wrap header-in">
+    <a class="logo" href="#top" aria-label="MASAR home"><span class="logo-name">MASAR</span><span class="logo-tag">Slower travel<br>Richer stories</span></a>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="#destinations">Destinations</a>
+      <a href="#journal">Journal</a>
+      <a href="#plan">Plan Your Trip</a>
+      <a href="#story">Our Story</a>
+      <button class="btn btn-sm nav-cta" data-open-planner>Start Planning</button>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="searchBtn" aria-label="Search destinations"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg></button>
+      <button class="btn btn-sm header-cta" data-open-planner>Start Planning</button>
+      <button class="icon-btn burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <form class="search" id="search" hidden role="search">
+    <div class="wrap"><label class="sr" for="q">Search destinations</label><input id="q" type="search" placeholder="Search Petra, AlUla, Wadi Rum…" autocomplete="off"><div class="search-res" id="searchRes" aria-live="polite"></div></div>
+  </form>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap hero-in">
+    <h1>Go somewhere<br>that stays with you.</h1>
+    <p class="lead">Curated journeys. Deeper connections.<br>A more meaningful way to see the world.</p>
+    <a class="btn" href="#destinations">Explore Destinations <span aria-hidden="true">→</span></a>
+  </div>
+  <ul class="hero-side" aria-hidden="true"><li>People</li><li>Places</li><li>Culture</li><li>A slower way</li></ul>
+  <p class="hero-note" aria-hidden="true">More<br>than a trip<br>a brighter you</p>
+</section>
+
+<section class="section" id="destinations">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><p class="eyebrow">Featured destinations</p><h2>Extraordinary places. A deeper perspective.</h2></div>
+      <a class="link-arrow" href="#destinations">View all destinations <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="cards">
+      <article class="dest reveal" data-id="petra">
+        <img src="images/petra.jpg" alt="The rose-red carved facade of Al-Khazneh in Petra" loading="lazy" width="800" height="447">
+        <div class="dest-cap"><h3>Petra</h3><p>Ancient wonders. Timeless beauty.</p></div>
+        <button class="dest-btn" data-detail="petra" aria-label="Read about Petra"><span aria-hidden="true">→</span></button>
+      </article>
+      <article class="dest reveal" data-id="alula">
+        <img src="images/alula.jpg" alt="Sandstone rock formations at sunset in AlUla" loading="lazy" width="800" height="447">
+        <div class="dest-cap"><h3>AlUla</h3><p>Where history meets the horizon.</p></div>
+        <button class="dest-btn" data-detail="alula" aria-label="Read about AlUla"><span aria-hidden="true">→</span></button>
+      </article>
+      <article class="dest reveal" data-id="wadirum">
+        <img src="images/wadirum.jpg" alt="Red mountains rising from the sands of Wadi Rum" loading="lazy" width="800" height="447">
+        <div class="dest-cap"><h3>Wadi Rum</h3><p>Vast landscapes. Lasting perspective.</p></div>
+        <button class="dest-btn" data-detail="wadirum" aria-label="Read about Wadi Rum"><span aria-hidden="true">→</span></button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="plan" id="plan">
+  <div class="wrap plan-in">
+    <div class="plan-intro reveal">
+      <p class="eyebrow">Plan your journey</p>
+      <h2>Your next chapter.</h2>
+      <p>A simple, thoughtful way to plan extraordinary days.</p>
+      <button class="btn" data-open-planner>Start Your Itinerary <span aria-hidden="true">→</span></button>
+    </div>
+    <ol class="steps reveal">
+      <li><span class="ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M3 6.5 9 4l6 2.5L21 4v13.5L15 20l-6-2.5L3 20z"/><path d="M9 4v13.5M15 6.5V20"/></svg></span><h3>1. Choose</h3><p>Pick your<br>destinations</p></li>
+      <li><span class="ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4M8 14h2M14 14h2M8 17h2"/></svg></span><h3>2. Plan</h3><p>Build your<br>day-by-day itinerary</p></li>
+      <li><span class="ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M3 19 10 7l4 7 2-3 5 8z"/><path d="m8.5 10 1.5 2 1.5-2"/></svg></span><h3>3. Experience</h3><p>Travel deeper,<br>not faster</p></li>
+      <li><span class="ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M12 20.5S3.5 15 3.5 9A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8.5 2c0 6-8.5 11.5-8.5 11.5z"/></svg></span><h3>4. Remember</h3><p>Stories that<br>last a lifetime</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="journal">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><p class="eyebrow">From the journal</p><h2>Real stories. A slower view.</h2></div>
+      <a class="link-arrow" href="#journal">Explore all stories <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="cards cards-j">
+      <article class="post reveal">
+        <a href="#journal" class="post-img"><img src="images/journal-1.jpg" alt="A woman sitting quietly on a rock above the Wadi Rum desert" loading="lazy" width="800" height="275"><span class="arr" aria-hidden="true">→</span></a>
+        <p class="cat">Travel stories</p><h3>Lessons from the Desert</h3>
+        <p>What Wadi Rum taught me about stillness, connection and a kinder pace of travel.</p>
+        <a class="read" href="#journal">Read more <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="post reveal">
+        <a href="#journal" class="post-img"><img src="images/journal-2.jpg" alt="A copper teapot and small cups on a woven rug" loading="lazy" width="800" height="275"><span class="arr" aria-hidden="true">→</span></a>
+        <p class="cat">Culture</p><h3>The Power of a Shared Cup</h3>
+        <p>In Jordan, hospitality isn’t a gesture — it’s a way of life.</p>
+        <a class="read" href="#journal">Read more <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="post reveal">
+        <a href="#journal" class="post-img"><img src="images/journal-3.jpg" alt="Turquoise Red Sea water beside a rocky coast at dusk" loading="lazy" width="800" height="275"><span class="arr" aria-hidden="true">→</span></a>
+        <p class="cat">Itineraries</p><h3>A Week Between Desert and Sea</h3>
+        <p>Mountains, canyons and the Red Sea — a journey that just feels right.</p>
+        <a class="read" href="#journal">Read more <span aria-hidden="true">→</span></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="news" id="story">
+  <div class="wrap news-in">
+    <div class="news-copy">
+      <p class="eyebrow">Stay in the loop</p>
+      <h2>More meaningful travel<br>in your inbox.</h2>
+      <p>Inspiration, new destinations and stories worth reading.</p>
+    </div>
+    <form class="news-form" id="newsForm" novalidate>
+      <label class="sr" for="email">Email address</label>
+      <input id="email" type="email" placeholder="Your email address" autocomplete="email" required>
+      <button class="btn" type="submit">Subscribe</button>
+      <p class="form-msg" id="newsMsg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap foot-in">
+    <a class="logo" href="#top" aria-label="MASAR home"><span class="logo-name">MASAR</span><span class="logo-tag">Slower travel<br>Richer stories</span></a>
+    <div class="foot-mid">
+      <nav aria-label="Footer"><a href="#destinations">Destinations</a><a href="#journal">Journal</a><a href="#plan">Plan Your Trip</a><a href="#story">Our Story</a><a href="#story">Contact</a></nav>
+      <p class="copy">© 2024 MASAR. A more meaningful way to see the world.</p>
+    </div>
+    <div class="foot-end">
+      <div class="social">
+        <a href="#top" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17" cy="7" r=".6" fill="currentColor"/></svg></a>
+        <a href="#top" aria-label="YouTube"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="12" rx="3.5"/><path d="m10.500 9.500 4 2.500-4 2.500z" fill="currentColor"/></svg></a>
+        <a href="#top" aria-label="Pinterest"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M11 16.500 13 9m-3.500 4c0 2 3.500 2 4.200-.5.700-2.500-1-4-3-3.500"/></svg></a>
+        <a href="#top" aria-label="Email"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="8.500"/><circle cx="12" cy="12" r="3"/><path d="M15 12v1.500a2 2 0 0 0 4 0"/></svg></a>
+      </div>
+      <p class="legal"><a href="#top">Privacy</a><a href="#top">Terms</a><a href="#top">FAQ</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="modal" id="detailModal" hidden>
+  <div class="modal-bg" data-close></div>
+  <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dTitle">
+    <button class="close" data-close aria-label="Close">×</button>
+    <img id="dImg" alt="">
+    <div class="dialog-body">
+      <p class="eyebrow" id="dMeta"></p>
+      <h2 id="dTitle"></h2>
+      <p id="dText"></p>
+      <ul class="facts" id="dFacts"></ul>
+      <button class="btn" id="dAdd">Add to trip</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="plannerModal" hidden>
+  <div class="modal-bg" data-close></div>
+  <div class="dialog planner" role="dialog" aria-modal="true" aria-labelledby="pTitle">
+    <button class="close" data-close aria-label="Close">×</button>
+    <div class="dialog-body">
+      <p class="eyebrow">Plan your journey</p>
+      <h2 id="pTitle">Build your itinerary</h2>
+      <div class="planner-grid">
+        <div>
+          <label class="lbl" for="startDate">Start date</label>
+          <input type="date" id="startDate">
+          <p class="lbl">Destinations &amp; days</p>
+          <div id="pList" class="plist"></div>
+          <button class="btn btn-ghost" id="pClear" type="button">Clear trip</button>
+        </div>
+        <div class="summary" aria-live="polite">
+          <h3>Your itinerary <span id="pTotal"></span></h3>
+          <ol id="pDays" class="days"></ol>
+          <p class="saved" id="pSaved"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
